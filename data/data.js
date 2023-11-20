@@ -21,6 +21,7 @@ function createListOfFoodItems(){
             "calories": getRandomNull(calories)
         });
     }
-    return foodItems;
 }
+
+module.exports = {foodItems, createListOfFoodItems};
 

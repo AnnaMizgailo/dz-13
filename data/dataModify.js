@@ -28,7 +28,7 @@ function getRandomCarbohydrates(){
 function getRandomNull(func){
     let ans = getRandomInt(0,1);
     if(ans){
-        return "-";
+        return 0;
     }
     return func;
 }

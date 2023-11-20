@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+.container{
+    margin: 0;
+    background-color: #fff;
+    color: black;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.prod{
+    width: 60%;
+}
+.proteins{
+    width: 10%;
+}
+.fats{
+    width: 10%;
+}
+.calories{
+    width: 10%;
+}
+.hydrocarbonates{
+    width: 10%;
+}
+.product{
+    width: 50%;
+}
+.img{
+    height: 10vh;
+    width: 10%;
+    object-fit: contain;
+}

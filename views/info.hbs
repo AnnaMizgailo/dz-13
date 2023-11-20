@@ -3,15 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
     <title>Calorizer 2.0</title>
 </head>
 <body>
     <div class="container">
-        <p class = "product">Продукт</p>
+        <p class = "prod">Продукт</p>
         <p class = "proteins">Бел, г</p>
         <p class="fats">Жиры, г</p>
         <p class="carbohydrates">Угл, г</p>
         <p class ="calories">Кал, ккал</p>
     </div>
+    
+{{#each .}}
+<div class="container">
+        {{#with .}}
+            {{#if src}}
+                <img class="img" src="https://calorizator.ru/sites/default/files/imagecache/product_512/product/{{src}}">
+            {{/if}}
+            {{#unless src}}
+                <p class = "img">-</p>
+            {{/unless}}
+            <p class = "product">{{name}}</p>
+            {{#if proteins}}
+                <p class="proteins">{{proteins}}</p>
+            {{/if}}
+            {{#unless proteins}}
+                <p class="proteins">-</p>
+            {{/unless}}
+            {{#if fats}}
+                <p class="fats">{{fats}}</p>
+            {{/if}}
+            {{#unless fats}}
+                <p class="fats">-</p>
+            {{/unless}}
+            {{#if carbohydrates}}
+                <p class="carbohydrates">{{carbohydrates}}</p>
+            {{/if}}
+            {{#unless carbohydrates}}
+                <p class="carbohydrates">-</p>
+            {{/unless}}
+            {{#if calories}}
+                <p class="calories">{{calories}}</p>
+            {{/if}}
+            {{#unless calories}}
+                <p class="calories">-</p>
+            {{/unless}}
+            {{/with}}
+            </div>
+    {{/each}}
 </body>
 </html>
